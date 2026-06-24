@@ -19,6 +19,8 @@
 # Build artifacts and directories
 **/build/
 build/
+build*/
+cmake-build-*/
 *.o
 *.a
 *.out
@@ -29,8 +31,8 @@ build/
 *.elf
 *.map
 flasher_args.json # Generated in build directory
-sdkconfig.old
 sdkconfig
+sdkconfig.*
 
 # ESP-IDF dependencies
 # For older versions or manual component management
@@ -76,3 +78,16 @@ Desktop.ini
 *.workspace # General workspace files, can be from various tools
 *.suo       # Visual Studio Solution User Options
 *.sln.docstates # Visual Studio
+
+# ESP-IDF generated
+dependencies.lock
+dependency.lock
+sdkconfig.cmake
+sdkconfig.h
+
+# flashing/debug artifacts
+flash_args
+flash_args.json
+monitor.log
+
+.vscode/
